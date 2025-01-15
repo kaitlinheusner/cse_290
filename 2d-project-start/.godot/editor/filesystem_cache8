@@ -1,12 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
+::res://::1736915700
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1736808170::0::1::::<><>::
 icon.png::CompressedTexture2D::621515402784007901::1736808170::1736808270::1::::<><>::
+one_player.gd::GDScript::-1::1736809585::0::1::::<>CharacterBody2D<>::
+one_player.tscn::PackedScene::140320417712398315::1736822158::0::1::::<><>::res://one_player.gd<>uid://pbmyh1qru7p::::res://characters/happy_boo/happy_boo.tscn
 ::res://addons/::1736808170
 ::res://addons/colorpicker_presets/::1736808170
 colorpicker_presets.gd::GDScript::-1::1736808170::0::1::::<>EditorPlugin<>::
 plugin.cfg::TextFile::-1::1736808170::0::1::::<><>::
 README.md::TextFile::-1::1736808170::0::1::::<><>::
+::res://characters/::1736808270
 ground_shadow.png::CompressedTexture2D::4668018078467755571::1736808170::1736808270::1::::<><>::
+::res://characters/happy_boo/::1736808270
 happy_boo.gd::GDScript::-1::1736808170::0::1::::<>Node2D<>::
 happy_boo.tscn::PackedScene::31049085407951015::1736808170::0::1::::<><>::res://characters/happy_boo/happy_boo.gd<>uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://ng8e5ot0dtpd::::res://characters/happy_boo/square_foot.png<>uid://dhapxq8y8ow57::::res://characters/happy_boo/square_lower_leg.png<>uid://qmqpm6asge1i::::res://characters/happy_boo/square_upper_leg.png<>uid://cksiu5gst6fmp::::res://characters/happy_boo/square_body.png<>uid://cvs0lh814pk7h::::res://characters/happy_boo/square_face.png
 square_body.png::CompressedTexture2D::5512411640973615011::1736808171::1736808270::1::::<><>::
