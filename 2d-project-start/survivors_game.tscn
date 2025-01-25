@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://83gnenydlxgi"]
+[gd_scene load_steps=5 format=3 uid="uid://83gnenydlxgi"]
 
 [ext_resource type="PackedScene" uid="uid://b88b6vvmg220" path="res://one_player.tscn" id="1_eoxv6"]
+[ext_resource type="Script" path="res://survivors_game.gd" id="1_fl125"]
 [ext_resource type="PackedScene" uid="uid://swl4wuphrog" path="res://pine_tree.tscn" id="2_7rjng"]
-[ext_resource type="PackedScene" uid="uid://bmvksc1hdol1w" path="res://mob.tscn" id="2_ck0b5"]
+
+[sub_resource type="Curve2D" id="Curve2D_nrorf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -311, -153, 0, 0, 0, 0, 2123, -139, 0, 0, 0, 0, 2126, 1244, 0, 0, 0, 0, -329, 1251, 0, 0, 0, 0, -333, 1105, 0, 0, 0, 0, -333, -146)
+}
+point_count = 6
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_fl125")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -30
@@ -17,11 +24,15 @@ offset_bottom = 1031.0
 [node name="Player" parent="." instance=ExtResource("1_eoxv6")]
 position = Vector2(867, 480)
 
-[node name="Mob" parent="." instance=ExtResource("2_ck0b5")]
-position = Vector2(485, 459)
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-2.43756, 12.4744)
+scale = Vector2(0.99268, 0.990029)
+curve = SubResource("Curve2D_nrorf")
 
-[node name="Mob2" parent="." instance=ExtResource("2_ck0b5")]
-position = Vector2(485, 459)
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(-311, -153)
+rotation = 0.00575179
 
 [node name="PineTree" parent="." instance=ExtResource("2_7rjng")]
 position = Vector2(371, 244)
@@ -47,11 +58,56 @@ position = Vector2(797, 796)
 [node name="PineTree8" parent="." instance=ExtResource("2_7rjng")]
 position = Vector2(1462, 758)
 
-[node name="Mob3" parent="." instance=ExtResource("2_ck0b5")]
-position = Vector2(916, 210)
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
 
-[node name="Mob4" parent="." instance=ExtResource("2_ck0b5")]
-position = Vector2(1271, 473)
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.745098)
 
-[node name="Mob5" parent="." instance=ExtResource("2_ck0b5")]
-position = Vector2(1076, 847)
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 156
+text = "Game Over"
+
+[node name="Wave" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="ColorRect" type="ColorRect" parent="Wave"]
+offset_right = 1943.0
+offset_bottom = 1046.0
+color = Color(0.16, 0.16, 0.16, 0.756863)
+
+[node name="wave_label" type="Label" parent="Wave/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 156
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
