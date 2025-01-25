@@ -5,7 +5,7 @@ const total_waves = 3
 var mobs_to_spawn = 0
 var active_mobs = 0
 @onready var wave_label = %wave_label
-@onready var wave_node = %Wave
+@onready var wave_node = %Wave	
 
 func _ready():
 	start_wave()
