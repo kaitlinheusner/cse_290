@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737783749
+::res://::1737837017
 bullet.gd::GDScript::-1::1737154663::0::1::::<>Area2D<>::
 bullet.tscn::PackedScene::3656504715996945217::1737224676::0::1::::<><>::uid://dftkbqwsfd68r::::res://pistol/projectile.png<>res://bullet.gd
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1736808170::0::1::::<><>::
@@ -9,10 +9,10 @@ icon.png::CompressedTexture2D::621515402784007901::1736808170::1736808270::1::::
 mob.gd::GDScript::-1::1737771720::0::1::::<>CharacterBody2D<>::
 mob.tscn::PackedScene::3272678199936933686::1737224676::0::1::::<><>::uid://ogik4s70pgwl::::res://characters/slime/slime.tscn<>res://mob.gd
 one_player.gd::GDScript::-1::1737510686::0::1::::<>CharacterBody2D<>::
-one_player.tscn::PackedScene::140320417712398315::1737775557::0::1::::<><>::res://one_player.gd<>uid://pbmyh1qru7p::::res://characters/happy_boo/happy_boo.tscn<>uid://dtwrvbss4alpl::::res://gun.tscn
+one_player.tscn::PackedScene::140320417712398315::1737783757::0::1::::<><>::res://one_player.gd<>uid://pbmyh1qru7p::::res://characters/happy_boo/happy_boo.tscn<>uid://dtwrvbss4alpl::::res://gun.tscn
 pine_tree.tscn::PackedScene::38515775238792142::1737224676::0::1::::<><>::uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://caqfk2xng5v5u::::res://trees/pine_tree.png
 survivors_game.gd::GDScript::-1::1737775492::0::1::::<>Node2D<>::
-survivors_game.tscn::PackedScene::2374422165716881144::1737775557::0::1::::<><>::uid://b88b6vvmg220::::res://one_player.tscn<>res://survivors_game.gd<>uid://swl4wuphrog::::res://pine_tree.tscn
+survivors_game.tscn::PackedScene::2374422165716881144::1737783758::0::1::::<><>::uid://b88b6vvmg220::::res://one_player.tscn<>res://survivors_game.gd<>uid://swl4wuphrog::::res://pine_tree.tscn
 ::res://addons/::1736808170
 ::res://addons/colorpicker_presets/::1736808170
 colorpicker_presets.gd::GDScript::-1::1736808170::0::1::::<>EditorPlugin<>::
